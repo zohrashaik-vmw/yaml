@@ -9,4 +9,3 @@ spec:
   ports:
     - port: 8089
       targetPort: 8089
-  type: LoadBalancer
