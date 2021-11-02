@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: practitioner-deployment
+  namespace: development
+spec:
+  selector:
+    matchLabels:
+      app: practitioner
+   template:
+    metadata:
+      labels:
+        app: practitioner
+    spec:
+      containers:
+      - name: pracitioner
+        image: harbor-repo.vmware.com/livewell/practitioner
+        ports:
+        - containerPort: 8089
