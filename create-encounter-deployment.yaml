@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: encounter-deployment
+  namespace: development
+spec:
+  selector:
+    matchLabels:
+      app: encounter
+  template:
+    metadata:
+      labels:
+        app: encounter
+    spec:
+      containers:
+      - name: encounter
+        image: harbor-repo.vmware.com/livewell/encounter
+        ports:
+        - containerPort: 8087
