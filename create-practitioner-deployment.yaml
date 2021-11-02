@@ -16,4 +16,4 @@ spec:
       - name: pracitioner
         image: harbor-repo.vmware.com/livewell/practitioner
         ports:
-        - containerPort: 8089
+        - containerPort: 8088
